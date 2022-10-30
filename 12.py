@@ -1,5 +1,5 @@
 import math
-f = open("i.txt", "r")
+f = open("input", "r")
 lines = f.read().split(' ')
 nums = list(map(int, lines))
 
