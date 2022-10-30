@@ -1,37 +1,26 @@
-def add(x: int, y: int) -> int:
-    """add two numbers together
+import math
+f = open("i.txt", "r")
+lines = f.read().split(' ')
+nums = list(map(int, lines))
 
-    Args:
-                    x (int): first number to add
-                    y (int): second number to add
+def _min(a):
+    m=min(a)
+    return m
 
-    Returns:
-                    int: sum of x and y
-    """
-    return x + y
+def _max(a):
+    m=max(a)
+    return m
 
+def _sum(a):
+    m=sum(a)
+    return m
 
-def subtract(x: int, y: int) -> int:
-    """subtract one number from another
+def _mult(a):
+    m=math.prod(a)
+    return m
 
-    Args:
-                    x (int): first number to subtract
-                    y (int): second number to subtract
-
-    Returns:
-                    int: resut of x subtract y
-    """
-    return x - y
-
-
-def multiply(x: int, y: int) -> int:
-    """multiply two numbers together
-
-    Args:
-                    x (int): first number in the multiplication
-                    y (int): second number in the multiplication
-
-    Returns:
-                    int: product of x and y
-    """
-    return x * y
+print ("В файле: ", *nums, sep=" ")
+print ("Минимальное: ", _min(nums))
+print ("Максимальное: ",_max(nums))
+print ("Сумма: ",_sum(nums))
+print ("Произведение: ",_mult(nums))
